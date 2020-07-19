@@ -2,9 +2,6 @@
 # Installation
 ```sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386```
 
-
-
-
 # Emu
 
 Unable to connect to abd daemon
@@ -109,3 +106,16 @@ https://www.linuxbabe.com/ubuntu/install-nvidia-driver-ubuntu-18-04
 # Fragment
 
 A Fragment is a piece of an activity which enable more modular activity design. It will not be wrong if we say, a fragment is a kind of sub-activity.
+
+# Views
+
+
+# Network???
+
+https://stackoverflow.com/questions/24399294/android-asynctask-to-make-an-http-get-request
+AsyncTask - strange really, может либу добавить?
+
+OkHttp
+https://www.vogella.com/tutorials/JavaLibrary-OkHttp/article.html
+
+https://developer.android.com/training/volley
