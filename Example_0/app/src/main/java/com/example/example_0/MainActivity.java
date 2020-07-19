@@ -44,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
 //        });
     }
 
+
+    // FIXME: как с сервисом взаимодействовать то?
     public void startService(View view){
         startService(new Intent(getBaseContext(), MyService.class));
     }

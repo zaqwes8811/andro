@@ -71,16 +71,19 @@ RAM
 
 sudo lshw -C memory 
 
-```*-bank:3
-          description: DIMM DDR3 Synchronous Unbuffered (Unregistered) 1600 MHz (0.6 ns)
-          product: CL11-11-11 D3-1600
-          vendor: A1_Manufacturer3
-          physical id: 3
-          serial: 00000000
-          slot: DIMM 1
-          size: 4GiB
-          width: 64 bits
-          clock: 1600MHz (0.6ns)```
+code 
+```
+*-bank:3
+description: DIMM DDR3 Synchronous Unbuffered (Unregistered) 1600 MHz (0.6 ns)
+product: CL11-11-11 D3-1600
+vendor: A1_Manufacturer3
+physical id: 3
+serial: 00000000
+slot: DIMM 1
+size: 4GiB
+width: 64 bits
+clock: 1600MHz (0.6ns)
+```
 
 
 # Errors
@@ -91,3 +94,18 @@ https://stackoverflow.com/questions/61839898/android-emulator-gives-an-error-so-
 [GeForce GT 740]
 
 https://www.linuxbabe.com/ubuntu/install-nvidia-driver-ubuntu-18-04
+
+
+# Activity
+
+# Service
+Как обращаться то?
+
+# Broadcast receivers
+
+# ContentProvider
+- доступ к диску?
+
+# Fragment
+
+A Fragment is a piece of an activity which enable more modular activity design. It will not be wrong if we say, a fragment is a kind of sub-activity.
