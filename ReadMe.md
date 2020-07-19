@@ -12,7 +12,7 @@ Unable to connect to abd daemon
 cd /home/z/Android/Sdk/emulator
 ../../Sdk/platform-tools/adb start-server
 
-/home/z/Android/Sdk/emulator/../../Sdk/platform-tools/adb start-server
+/home/z/Android/Sdk/platform-tools/adb start-server
 
 
 
@@ -45,7 +45,9 @@ https://developer.android.com/studio/run/emulator-acceleration
 -screen no-touch
 
 Best:
-```./emulator -avd Nexus_5X_API_26 -gpu host -memory 1024 -noaudio  -no-boot-anim```
+```./emulator -avd Pixel_2_XL_API_26 -gpu host -memory 1024 -noaudio  -no-boot-anim```
+```./emulator -avd Pixel_2_XL_API_26 -gpu host -memory 1024```
+
 
 d AV.. Manager можно ограничить тоже
 
@@ -79,3 +81,13 @@ sudo lshw -C memory
           size: 4GiB
           width: 64 bits
           clock: 1600MHz (0.6ns)```
+
+
+# Errors
+https://stackoverflow.com/questions/61839898/android-emulator-gives-an-error-so-reuseport-and-debugging-not-working
+
+# Nvidia
+
+[GeForce GT 740]
+
+https://www.linuxbabe.com/ubuntu/install-nvidia-driver-ubuntu-18-04
