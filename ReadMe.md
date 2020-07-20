@@ -132,3 +132,10 @@ https://qna.habr.com/q/257433
 10.0.2.2
 
 https://stackoverflow.com/questions/45940861/android-8-cleartext-http-traffic-not-permitted
+
+# Kotlin
+
+https://stackoverflow.com/questions/45025758/how-to-use-kotlin-in-an-existing-android-app
+добавли скрипт, потом плагин предложила поставить
+
+autoconfig is failed

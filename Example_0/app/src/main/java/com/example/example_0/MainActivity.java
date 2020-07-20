@@ -4,32 +4,23 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.util.Log;
+import android.util.LruCache;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
 
-import com.android.volley.Cache;
-import com.android.volley.Network;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.BasicNetwork;
-import com.android.volley.toolbox.DiskBasedCache;
-import com.android.volley.toolbox.HurlStack;
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
-import android.util.Log;
-import android.util.LruCache;
-import android.view.View;
-
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.ImageView;
+import com.example.example_0.ZeroKo;
 
 class MySingleton {
     private static MySingleton instance;
@@ -97,7 +88,8 @@ class MySingleton {
 }
 
 public class MainActivity extends AppCompatActivity {
-    String msg = "Android : ";
+    static String msg = "Android : ";
+    static String url = "http://10.0.2.2:8008";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -127,15 +119,21 @@ public class MainActivity extends AppCompatActivity {
         RequestQueue queue = MySingleton.getInstance(this.getApplicationContext()).
                 getRequestQueue();
 
-        String url = "http://10.0.2.2:8008";
 
         // Formulate the request and handle the response.
+        // FIXME: видимо можно сразу JSON
+//        JsonRequest
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
+                // FIXME: почему String
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
                         // Do something with the response
-                        Log.d(msg, " onResponse()");
+                        Log.d(msg, " onResponse() " + response);
+//                        Log.d(msg, response.substring(0, 4000));
+
+                        // FIXME: exception
+//                        JSONObject jObject = new JSONObject(response);
                     }
                 },
                 new Response.ErrorListener() {
@@ -147,7 +145,6 @@ public class MainActivity extends AppCompatActivity {
                 });
         queue.add(stringRequest);
     }
-
 
     // FIXME: как с сервисом взаимодействовать то?
     public void startService(View view) {
@@ -181,5 +178,17 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private enum State {
+        IDLE, WAIT_ALL
+    }
+
+    private enum Event {
+        received
+    }
+
+    private void changeState(State state) {
+
     }
 }
