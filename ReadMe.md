@@ -119,3 +119,11 @@ OkHttp
 https://www.vogella.com/tutorials/JavaLibrary-OkHttp/article.html
 
 https://developer.android.com/training/volley
+
+# Native vs Cross
+
+https://xakep.ru/2017/12/25/crossplatform-myths/
+
+# Верстка
+
+https://qna.habr.com/q/257433
