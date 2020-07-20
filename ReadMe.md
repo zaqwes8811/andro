@@ -127,3 +127,8 @@ https://xakep.ru/2017/12/25/crossplatform-myths/
 # Верстка
 
 https://qna.habr.com/q/257433
+
+# Http access
+10.0.2.2
+
+https://stackoverflow.com/questions/45940861/android-8-cleartext-http-traffic-not-permitted
